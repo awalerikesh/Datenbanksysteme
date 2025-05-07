@@ -1,0 +1,75 @@
+-- Aufgabe 10.2
+INSERT INTO MY_EMPLOYEE
+VALUES (1, 'Patel', 'Ralph', 'rpatel', 895);
+
+-- Aufgabe 10.3
+INSERT INTO MY_EMPLOYEE
+(ID, LAST_NAME, FIRST_NAME, USERID, SALARY)
+VALUES 
+(2, 'Dancs', 'Betty', 'bdancs', 860);
+
+-- Aufgabe 10.4
+SELECT * FROM MY_EMPLOYEE;
+
+-- Aufgabe 10.4
+INSERT ALL
+  INTO MY_EMPLOYEE (ID, LAST_NAME, FIRST_NAME, USERID, SALARY)
+    VALUES (3, 'Biri', 'Ben', 'bbiri', 1100)
+  INTO MY_EMPLOYEE (ID, LAST_NAME, FIRST_NAME, USERID, SALARY)
+    VALUES (4, 'Newman', 'Chad', 'cnewman', 750)
+SELECT * FROM dual;
+
+-- Aufgabe 10.5
+COMMIT;
+
+-- Aufgabe 10.6
+UPDATE MY_EMPLOYEE
+SET LAST_NAME = 'Drexler'
+WHERE ID = 3;
+
+-- Aufgabe 10.7
+UPDATE MY_EMPLOYEE
+SET SALARY = 1000
+WHERE SALARY < 900;
+
+-- Aufgabe 10.8
+SELECT * FROM MY_EMPLOYEE;
+
+-- Aufgage 10.9
+DELETE FROM MY_EMPLOYEE
+WHERE FIRST_NAME = 'Betty' AND LAST_NAME = 'Dancs';
+
+-- Aufgabe 10.10
+SELECT * FROM MY_EMPLOYEE;
+
+-- Aufgabe 10.11
+COMMIT;
+
+-- Aufgabe 10.12
+INSERT ALL
+  INTO MY_EMPLOYEE (ID, LAST_NAME, FIRST_NAME, USERID, SALARY)
+    VALUES (2, 'Dancs', 'Betty', 'bdancs', 860)
+  INTO MY_EMPLOYEE (ID, LAST_NAME, FIRST_NAME, USERID, SALARY)
+    VALUES (5, 'Ropeburn', 'Audry', 'aropebur', 1550)
+SELECT * FROM dual;
+
+-- Aufgabe 10.13
+SELECT * FROM MY_EMPLOYEE;
+
+-- Aufgabe 10.14
+SAVEPOINT nach_aufgabe_10_13;
+
+-- Aufgabe 10.15
+DELETE FROM MY_EMPLOYEE;
+
+-- Aufgabe 10.16
+SELECT * FROM MY_EMPLOYEE;
+
+-- Aufgabe 10.17
+ROLLBACK TO nach_aufgabe_10_13;
+
+-- Aufgabe 10.18
+SELECT * FROM MY_EMPLOYEE;
+
+-- Aufgabe 10.19
+COMMIT;
